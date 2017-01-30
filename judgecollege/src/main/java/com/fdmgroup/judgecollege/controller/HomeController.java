@@ -15,7 +15,8 @@ public class HomeController {
 	
 	@RequestMapping("/")
 	public String index(Model model){
-		model.addAttribute("greeting", "Hello World");
+		String currentUser = System.getProperty("user.name");
+		model.addAttribute("greeting", "Hello "+currentUser);
 		model.addAttribute("tagline", "Welcome to Judge College");
 		return "index";
 	}
