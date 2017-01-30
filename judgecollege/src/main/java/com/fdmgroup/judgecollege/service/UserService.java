@@ -28,5 +28,10 @@ public class UserService {
 		}
 		return users;
 	}
+	
+	public void add(User user){
+		userRepo.save(user);
+		
+	}
 
 }
